@@ -1,0 +1,61 @@
+﻿Estrutura da tabela `empregados`
+
+
+-CREATE TABLE `empregados` (
+  `Matricula` int(11) NOT NULL,
+  `Função` varchar(535) NOT NULL,
+  `CargaHoraria` varchar(535) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+Estrutura da tabela `morador`
+
+-
+CREATE TABLE `morador` (
+  `Nome` varchar(535) NOT NULL,
+  `Apartamento` int(11) NOT NULL,
+  `Veiculo` varchar(535) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;Estrutura da tabela `prestador de serviço`
+
+
+
+CREATE TABLE `prestador de serviço` (
+  `Id Prestador` int(11) NOT NULL,
+  `CNPJ` varchar(535) NOT NULL,
+  `DataServiço` date NOT NULL,
+  `Descriçao` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+Estrutura da tabela `visitantes`
+
+
+CREATE TABLE `visitantes` (
+  `IdVisitantes` int(11) NOT NULL,
+  `Nome` varchar(535) NOT NULL,
+  `CPF` varchar(535) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+Indexes for dumped tables
+Indexes for table `empregados`
+ALTER TABLE `empregados`
+  ADD PRIMARY KEY (`Matricula`);
+Indexes for table `morador`
+
+ALTER TABLE `morador`
+  ADD PRIMARY KEY (`Apartamento`);
+
+
+Indexes for table `prestador de serviço`
+
+ALTER TABLE `prestador de serviço`
+  ADD PRIMARY KEY (`Id Prestador`);
+Indexes for table `visitantes`
+
+ALTER TABLE `visitantes`
+  ADD PRIMARY KEY (`IdVisitantes`);
+AUTO_INCREMENT for dumped tables
+AUTO_INCREMENT for table `morador`
+ALTER TABLE `morador`
+  MODIFY `Apartamento` int(11) NOT NULL AUTO_INCREMENT;
+AUTO_INCREMENT for table `visitantes`
+--
+ALTER TABLE `visitantes`
+  MODIFY `IdVisitantes` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
